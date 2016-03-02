@@ -5,7 +5,7 @@ function hasgui()
     return hasgui(username)
 end
 
-function hasgui(username::String)
+function hasgui(username::AbstractString)
     s = readall(`who`)
     return ismatch(Regex("$username[ \t]* console"),s)
 end
